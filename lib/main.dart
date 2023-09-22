@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:practice/internet_cubit.dart';
-import 'home_page.dart';
-import 'login.dart';
+import 'package:practice/todo_cubit.dart';
+import 'package:practice/todo_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,14 +14,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-        create: (context) => InternetCubit(),
+      create: (context) => TodoCubit(),
       child: MaterialApp(
-        title: 'Flutter Demo',
+        title: 'Bloc',
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const Login(),
+        home:  const TodoPage(),
         debugShowCheckedModeBanner: false,
       ),
     );
