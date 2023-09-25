@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:practice/internet_cubit.dart';
+import 'package:practice/cubit/internet_cubit/internet_cubit.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

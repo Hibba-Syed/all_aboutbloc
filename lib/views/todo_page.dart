@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:practice/todo_cubit.dart';
+import 'package:practice/cubit/todo_cubit/todo_cubit.dart';
+import 'package:practice/views/seconde_page.dart';
 class TodoPage extends StatefulWidget {
   const TodoPage({super.key});
 
@@ -22,7 +23,8 @@ class _TodoPageState extends State<TodoPage> {
           if(state.loading){
             return const Center(
                 child: CircularProgressIndicator());
-          } if (state.error!= null){
+          }
+          if (state.error!= null){
             return const Center(
                 child: CircularProgressIndicator());}
             final todos = state.todoModel;
@@ -31,12 +33,15 @@ class _TodoPageState extends State<TodoPage> {
                 itemBuilder: (context,index ){
                 final todo = todos?[index];
                   return InkWell(
-                    onTap: (){
-
-                    },
-                    child: ListTile(
-                      title: Text(todo?.title??""),
-                    ),
+                      onTap: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => const SecondApi()),
+                        );
+                      },
+                      child: ListTile(
+                        title: Text(todo?.title??""),
+                      ),
                   );
 
                 }

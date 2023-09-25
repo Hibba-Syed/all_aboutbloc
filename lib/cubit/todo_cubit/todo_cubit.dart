@@ -1,8 +1,8 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:practice/repo_api.dart';
+import 'package:practice/repo/repo_api.dart';
 
-import 'model.dart';
+import '../../model/todo_model.dart';
 
 part 'todo_state.dart';
 
