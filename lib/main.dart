@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:practice/cubit/product_cubit/product_cubit.dart';
+import 'package:practice/views/chat_sreen.dart';
 import 'package:practice/views/seconde_page.dart';
 import 'package:practice/cubit/todo_cubit/todo_cubit.dart';
 import 'package:practice/views/todo_page.dart';
@@ -23,10 +24,10 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         title: 'Bloc',
         theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+          colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
           useMaterial3: true,
         ),
-        home:  const TodoPage(),
+        home:   NotesPage(),
         debugShowCheckedModeBanner: false,
       ),
     );
