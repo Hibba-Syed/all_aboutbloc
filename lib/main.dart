@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:practice/cubit/product_cubit/product_cubit.dart';
+import 'package:practice/views/HNH%20UI/unit_detail_page.dart';
 import 'package:practice/views/chat_sreen.dart';
 import 'package:practice/views/seconde_page.dart';
 import 'package:practice/cubit/todo_cubit/todo_cubit.dart';
@@ -27,7 +28,8 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.white),
           useMaterial3: true,
         ),
-        home:   NotesPage(),
+        home: const TenantUnitDetail(),
+        //NotesPage(),
         debugShowCheckedModeBanner: false,
       ),
     );
